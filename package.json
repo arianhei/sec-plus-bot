@@ -17,10 +17,8 @@
     "loadash": "^1.0.0",
     "ms": "^2.1.2",
     "parse-ms": "^2.1.0",
-    "react": "^17.0.1",
     "request": "^2.88.2",
     "request-progress": "^3.0.0",
-    "sqlite3": "^5.0.0",
     "stream": "0.0.2",
     "yaml": "^1.10.0"
   }
