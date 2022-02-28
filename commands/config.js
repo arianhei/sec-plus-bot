@@ -1,4 +1,3 @@
-try{
 module.exports = {
     name: "config",
     description: 'Config your server data | Use options to see help',
@@ -327,7 +326,4 @@ module.exports = {
             if (args[2] === "delete") { }
         }
     }
-}
-}catch(err){
-    console.log("config : "+err)
 }
