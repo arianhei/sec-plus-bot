@@ -1,6 +1,6 @@
 module.exports = {
     name: 'gr',
-    description: 'Give role of member or everyone',
+    description: 'Give role to member or everyone',
     execute(message) {
         const db = require('../db')
         const json_log = db.data(message.guild.id)
