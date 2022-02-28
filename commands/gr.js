@@ -2,8 +2,8 @@ module.exports = {
     name: 'gr',
     description: 'Give role to member or everyone',
     execute(message) {
-        const db = require('../db')
-        const json_log = db.data(message.guild.id)
+        const db = require('../db');
+        const json_log = db.data(message.guild.id);
         if (!(json_log.white_list.includes(message.author.id) || message.author.id === message.guild.ownerID)) {
             return message.channel.send({ embed: { title: "you arent a part of whitelist", color: 0xfc2003 } })
         }
@@ -67,12 +67,12 @@ module.exports = {
                 }
                 if(ro.position < message.guild.me.roles.highest.position)
                 {
-                    member.roles.add(ro)
+                    member.roles.add(ro);
                 }
                 else{
-                    return message.channel.send({embed: {description: `Error 0x506: i cant give a ${ro.name} because its higher than my role`}})
+                    return message.channel.send({embed: {description: `Error 0x506: i cant give a ${ro.name} because its higher than my role`}});
                 }
-                message.channel.send({embed: {title: `Gave ${ro.name} Successfully`}})
+                message.channel.send({embed: {title: `Gave ${ro.name} Successfully`}});
             });
         }
     }
