@@ -1,7 +1,6 @@
-try{
 module.exports = {
     name: 'help',
-    description: 'Get bot help menu <a:tik3:777128127804735518>',
+    description: 'Get bot help menu',
     execute(message){
         let colorran = [0xccffcc,0x66ff99,0xffffff,0xff99ff,0x99ff99,0x00ffff,0xffccff]
         let json_log = require('./../db').data(message.guild.id)
@@ -12,7 +11,7 @@ module.exports = {
             message.client.commands.forEach(c => {
                 if(c.name !== "reload") d.fields.push({name: c.name, value: c.description,inline:true});
             })
-            d.fields.push({name: "Support server link", value: "[Sec+ Support Server](https://discord.gg/kWVVtgXHCx)",inline:true},{name:"Bot Invite Link",value:"[Click Here](https://discord.com/oauth2/authorize?client_id=680136567066853380&scope=bot&permissions=1945632250)",inline:true});
+            d.fields.push({name: "Support server link", value: "[Sec+ Support Server](https://discord.gg/9xFRDEZXmu)",inline:true},{name:"Bot Invite Link",value:"[Click Here](https://YOUR_INVITE_LINK)",inline:true});
             message.channel.send({embed : d})
         }
         else{
@@ -28,7 +27,4 @@ module.exports = {
             }
         }
     }
-}
-}catch(err){
-    console.log(err)
 }
