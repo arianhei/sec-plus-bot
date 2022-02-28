@@ -255,7 +255,6 @@ module.exports = {
                     const __message__ = collected.first()
                     const num = parseInt(__message__.content.slice(0, 1)) - 1
                     if (num > json_log.allow_action.length) return message.channel.send({ embed: { title: "Error 0x1010: your entry isnt in list" } })
-                    //message.channel.send({embed : {title:"completed"}})
 
 
                     const arg = __message__.content.trim().split(/ +/)
